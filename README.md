@@ -62,12 +62,19 @@ developing your own process.
 
 - Add a new toy when the toy form is submitted
 
-  - How I debugged:
+  - How I debugged: 
+    I checked the browser console and saw that it was a 500 server error.
+    I then checked my Rails terminal which showed an uninitialized constant of "toys" in my toycontroller.
 
 - Update the number of likes for a toy
 
   - How I debugged:
+    I checked the browser console and saw that it was an unexpected end of JSON input, meaning
+    a JSON object was not being returned as a response from the server.
+    I then looked in my controller and noticed my create route was not rendering JSON as a response.
 
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+    I checked the browser console with showed a 404 Not Found error.
+    I then checked my Rails terminal which show that there was a routing error, no route for DELETE
